@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.js"
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.161",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.9.1",
     "esbuild": "^0.28.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.10",
     "typescript": "^6.0.3"
   },
   "dependencies": {

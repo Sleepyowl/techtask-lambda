@@ -1,0 +1,12 @@
+services:
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    container_name: testtask-dynamodb-local
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+    user: root
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./.test-data/dynamodb:/home/dynamodblocal/data
+
