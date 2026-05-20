@@ -37,7 +37,7 @@ jobs:
 
       - run: |
           aws lambda update-function-code \
-            --function-name ${{ vars.QA_LAMBDA_NAME }} \
+            --function-name ${{ vars.NOTIFICATION_API_LAMBDA_NAME }} \
             --zip-file fileb://lambda.zip
 
   deploy-prod:
@@ -69,5 +69,5 @@ jobs:
 
       - run: |
           aws lambda update-function-code \
-            --function-name ${{ vars.PROD_LAMBDA_NAME }} \
+            --function-name ${{ vars.NOTIFICATION_API_LAMBDA_NAME }} \
             --zip-file fileb://lambda.zip
