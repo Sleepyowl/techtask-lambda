@@ -6,7 +6,6 @@ import {
 import { notFound, internalError } from "./api-helpers";
 import { routes } from "./api-handlers"
 
-
 export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
   const routeKey = event.routeKey;
   const route = routes[routeKey];
